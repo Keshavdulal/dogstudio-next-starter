@@ -16,7 +16,7 @@ const blog = ({allPosts}) =>{
               <h3>{post.title}</h3>
               <div>{post.excertp}</div>
               <p>>{post.date}</p>
-              <Link href={'/post/${post.slug}'}>
+              <Link href={`/post/${post.slug}`}>
                 <a>Read more</a>
               </Link>
             </div>
