@@ -1,67 +1,41 @@
 ## Dogstudio Next Starter
 
-![Dependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/status.svg)
-![devDependencies](https://david-dm.org/Dogstudio/dogstudio-next-starter/dev-status.svg)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](/LICENSE.md)
-
-The Next.js starter with all the features you'll need to build blazing-fast websites and applications.
-
-- Opinionated dependencies
-- Next.js 10
-- Prettier
-- ESLint
-- i18next
-- Shaders
-- SCSS/SASS
-- CSS Modules
-- Web Workers
-- [**Custom SCSS toolkit**](/src/styles/kennel)
-
 ## Getting Started
 
-```bash
-git clone git@github.com:Dogstudio/dogstudio-next-starter.git my-new-app
-```
+### WordPress Setup (Optional; Skip to Cloning the project)
+1. Download & Install Bitnami-Wordpress
+This failed because of some complication with Mac OSX Big Sur
+
+2. Download & install “Local” from WP Engine instad
+
+https://wpengine.com/local/#download
+
+3. Create a dummy site name ‘foobar’ on Local and run it with default settings.
+
+http://foobar.local/
+
+4. Once the default site is running, now Login with your WP Credentials to the CMS 
+
+http://foobar.local/wp-admin
+
+5. Visit Plugin Section and Install a plugin Called GraphQL
+
+6. After installation, make sure you have GraphQL IDE to create/test GraphQL Queries.
+
+7. Create .env.local file and add 
+
+<!-- WORDPRESS_GRAPHQL_ENDPOINT="http://foobar.local/graphql" -->
+WP_URL = "http://foobar.local/graphql"
+
+### Clone the project
 
 ```bash
-cd my-new-app
+git clone git@github.com:Keshavdulal/dogstudio-next-starter.git
+```
+
+### Package Installation and Running the local server
+```bash
+cd dogstudio-next-starter
 npm i
 npm run dev
 ```
-
-## Documentation
-
-We recommend the following documentations to master the starter:
-
-- [React](https://reactjs.org/docs/getting-started.html)
-- [Next.js](https://nextjs.org/docs/getting-started)
-- [Prettier](https://prettier.io/docs/en/editors.html)
-- [CSS Modules](https://github.com/css-modules/css-modules)
-- [Localization](https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app)
-
-## References
-
-```bash
-# Run Next.js in development-mode with a local server.
-# Visit http://localhost:3000 to see your application running.
-npm run dev
-
-# Run Next.js in production-mode and creates a production build.
-npm run build
-
-# Run Next.js in production-mode with a local server.
-# Visit http://localhost:3000 to see your production build.
-npm run start
-
-# Lints all `.js` and `.jsx` files in `pages` and `src`.
-# ESLint extends the `prettier` and `react-app` configurations.
-npm run lint
-```
-
-## Contributing
-
-Please submit issues, pull requests or [contact us](devops@dogstudio.be). We are open to all kind of contributions.
-
-## License
-
-The `dogstudio-next-starter` repository is [MIT licensed](/LICENSE.md).
