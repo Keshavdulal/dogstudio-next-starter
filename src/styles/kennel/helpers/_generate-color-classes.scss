@@ -9,7 +9,11 @@
 ///
 /// @requires {variable} default-colors
 
-@mixin generate-color-classes($palette: $default-colors, $prefix: 'c-', $property: 'color') {
+@mixin generate-color-classes(
+  $palette: $default-colors,
+  $prefix: 'c-',
+  $property: 'color'
+) {
   @each $name, $color in $palette {
     .#{unquote($prefix + $name)} {
       #{$property}: $color;

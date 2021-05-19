@@ -6,7 +6,7 @@
 ///
 /// @param {Number} $angle
 ///   Controls the directions of the shadow.
-/// @param {Number} $distance 
+/// @param {Number} $distance
 ///   Controls the shadow offset in the direction of the Angle.
 /// @param {Number} $spread
 ///   Determines the portion of the shadow (percentage of the Size)
@@ -29,7 +29,14 @@
 ///   text-shadow: 1px 1px 2px #fff;
 ///
 /// @return {Shadow}
-@function ps-shadow($angle: 120deg, $distance: 5px, $spread: 0%, $size: 5px, $color: rgba(0, 0, 0, 0.75), $inner: false) {
+@function ps-shadow(
+  $angle: 120deg,
+  $distance: 5px,
+  $spread: 0%,
+  $size: 5px,
+  $color: rgba(0, 0, 0, 0.75),
+  $inner: false
+) {
   // Stip values
   $distance: strip-units($distance);
   $spread: strip-units($spread);
@@ -39,7 +46,7 @@
   @if unitless($angle) {
     $angle: $angle * 1deg;
   }
-  
+
   $angle: 180 - convert-angle($angle, deg); // Photoshop angle starts 180deg before
   $angle: convert-angle($angle, rad); // Convert to radians
 
@@ -51,11 +58,22 @@
   @return $x $y $blur $spread $color if($inner, inset, null);
 }
 
-@function ps-text-shadow($angle: 120deg, $distance: 5px, $spread: 0%, $size: 5px, $color: rgba(0, 0, 0, 0.75)) {
+@function ps-text-shadow(
+  $angle: 120deg,
+  $distance: 5px,
+  $spread: 0%,
+  $size: 5px,
+  $color: rgba(0, 0, 0, 0.75)
+) {
   $shadow: ps-shadow($angle, $distance, $spread, $size, $color);
   @return (nth($shadow, 1) nth($shadow, 2) nth($shadow, 3) nth($shadow, 5));
 }
 
-@function ps-glow($spread: 0, $size: 0, $color: rgba(0, 0, 0, 0.75), $inner: false) {
+@function ps-glow(
+  $spread: 0,
+  $size: 0,
+  $color: rgba(0, 0, 0, 0.75),
+  $inner: false
+) {
   @return ps-shadow(0, 0, $spread, $size, $color, $inner);
 }

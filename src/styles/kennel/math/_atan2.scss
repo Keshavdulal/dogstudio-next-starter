@@ -21,7 +21,7 @@
     }
   } @else {
     @if $y < 0 {
-      @return - $PI / 2;
+      @return -$PI / 2;
     } @else if $y > 0 {
       @return $PI / 2;
     } @else {

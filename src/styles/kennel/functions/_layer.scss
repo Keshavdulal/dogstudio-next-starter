@@ -10,19 +10,19 @@
 ///   z-index: layer(below);
 ///   z-index: layer(modal);
 ///   z-index: layer(modal, header);
-///   
+///
 /// @example css - CSS Output
 ///   z-index: -1;
 ///   z-index: 500;
 ///   z-index: 50;
-///   
+///
 /// @return {Number}
 @function layer($layers...) {
   $value: map-deep-get($z-layers, $layers...);
-  
-  @if type-of($value) == "map" {
+
+  @if type-of($value) == 'map' {
     $value: map-get($value, base);
   }
-  
+
   @return $value;
 }

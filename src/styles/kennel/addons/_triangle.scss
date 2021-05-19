@@ -6,7 +6,11 @@
   height: 0;
   width: 0;
 
-  @if ($direction == up) or ($direction == down) or ($direction == right) or ($direction == left) {
+  @if ($direction == up) or
+    ($direction == down) or
+    ($direction == right) or
+    ($direction == left)
+  {
     $width: $width / 2;
     $height: if(length($size) > 1, $height, $height/2);
 
@@ -52,11 +56,17 @@
     border-style: solid;
     border-width: $height $width;
   } @else if ($direction == inset-right) {
-    border-color: $background-color $background-color $background-color $foreground-color;
+    border-color: $background-color
+      $background-color
+      $background-color
+      $foreground-color;
     border-style: solid;
     border-width: $width $height;
   } @else if ($direction == inset-left) {
-    border-color: $background-color $foreground-color $background-color $background-color;
+    border-color: $background-color
+      $foreground-color
+      $background-color
+      $background-color;
     border-style: solid;
     border-width: $width $height;
   }

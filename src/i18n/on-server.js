@@ -1,10 +1,12 @@
 // See: https://lazertechnologies.com/blog/how-to-add-localization-to-your-nextjs-app
 // Next i18n
-const NextI18Next = require("next-i18next").default;
+const NextI18Next = require('next-i18next').default;
 
 // Constants
 const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT || 'en';
-const LANGUAGES = (process.env.NEXT_PUBLIC_I18N_LANGUAGES || 'en|fr').split('|');
+const LANGUAGES = (process.env.NEXT_PUBLIC_I18N_LANGUAGES || 'en|fr').split(
+  '|'
+);
 
 // Server Configuration
 module.exports = new NextI18Next({

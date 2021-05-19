@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 // Constants
 import { IS_BROWSER } from 'utils/constants';

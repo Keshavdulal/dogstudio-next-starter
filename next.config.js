@@ -16,27 +16,26 @@ module.exports = withImages({
 
   // Images Options
   images: {
-    deviceSizes: [
-      320,
-      450,
-      600,
-      768,
-      1024,
-      1160,
-      1440
-    ]
+    deviceSizes: [320, 450, 600, 768, 1024, 1160, 1440]
   },
 
   // SASS Options
   sassLoaderOptions: {
-    includePaths: [
-      path.join(__dirname),
-      path.join(__dirname, 'src')
-    ]
+    includePaths: [path.join(__dirname), path.join(__dirname, 'src')]
   },
 
   // Images Options
-  fileExtensions: ['jpg', 'jpeg', 'png', 'svg', 'gif', 'ico', 'webp', 'jp2', 'avif'],
+  fileExtensions: [
+    'jpg',
+    'jpeg',
+    'png',
+    'svg',
+    'gif',
+    'ico',
+    'webp',
+    'jp2',
+    'avif'
+  ],
   inlineImageLimit: false,
 
   // Extend Webpack Configuration

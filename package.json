@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "lint": "eslint --ext .jsx,.js src/ pages/",
+    "format": "yarn prettier --config ./.prettierrc --write .",
     "build": "next build",
     "start": "next start"
   },

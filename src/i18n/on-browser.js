@@ -14,17 +14,15 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 // Constants
 const DEBUG = boolean(process.env.NEXT_PUBLIC_I18N_DEBUG);
 const DEFAULT = process.env.NEXT_PUBLIC_I18N_DEFAULT || 'en';
-const LANGUAGES = (process.env.NEXT_PUBLIC_I18N_LANGUAGES || 'en|fr').split('|');
+const LANGUAGES = (process.env.NEXT_PUBLIC_I18N_LANGUAGES || 'en|fr').split(
+  '|'
+);
 const SAVE_MISSING = boolean(process.env.NEXT_PUBLIC_I18N_SAVE_MISSING);
 
 // Browser Configuration
 const i18n = new NextI18Next({
   // Dependencies
-  use: [
-    Backend,
-    LanguageDetector,
-    initReactI18next
-  ],
+  use: [Backend, LanguageDetector, initReactI18next],
 
   // See: https://www.i18next.com/overview/configuration-options
   debug: DEBUG,
@@ -47,12 +45,21 @@ const i18n = new NextI18Next({
   // Detection
   detection: {
     // See: https://github.com/i18next/i18next-browser-languageDetector#detector-options
-    order: ['path', 'htmlTag', 'querystring', 'cookie', 'localStorage', 'sessionStorage', 'navigator', 'subdomain'],
+    order: [
+      'path',
+      'htmlTag',
+      'querystring',
+      'cookie',
+      'localStorage',
+      'sessionStorage',
+      'navigator',
+      'subdomain'
+    ],
 
     // Next-i18next by default searches for the `next-i18next` cookie on server requests
     lookupCookie: 'next-i18next',
     lookupLocalStorage: 'i18nextLng',
-    
+
     // Cache the language in cookies and local storage
     caches: ['cookie', 'localStorage']
   },

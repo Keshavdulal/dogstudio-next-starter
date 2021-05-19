@@ -1,13 +1,19 @@
 @charset 'UTF-8';
 
-@mixin retina-image($filename, $background-size, $extension: png, $retina-filename: null, $retina-suffix: _2x) {
-  background-image: image("#{$filename}.#{$extension}");
+@mixin retina-image(
+  $filename,
+  $background-size,
+  $extension: png,
+  $retina-filename: null,
+  $retina-suffix: _2x
+) {
+  background-image: image('#{$filename}.#{$extension}');
 
   @include hidpi {
     @if $retina-filename {
-      background-image: image("#{$retina-filename}.#{$extension}");
+      background-image: image('#{$retina-filename}.#{$extension}');
     } @else {
-      background-image: image("#{$filename}#{$retina-suffix}.#{$extension}");
+      background-image: image('#{$filename}#{$retina-suffix}.#{$extension}');
     }
 
     background-size: $background-size;

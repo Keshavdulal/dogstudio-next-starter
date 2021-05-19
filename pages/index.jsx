@@ -2,7 +2,7 @@ import Head from 'next/head';
 import React from 'react';
 
 //Components
-import Navigation from '../src/components/Navigation'
+import Navigation from '../src/components/Navigation';
 
 // i18n
 import { useTranslation } from 'i18n';
@@ -24,7 +24,7 @@ const Home = () => {
       <Head>
         <title>Next | Dogstudio</title>
       </Head>
-      
+
       <Navigation />
 
       <Text>{t('Hello World!')}</Text>
